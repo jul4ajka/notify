@@ -68,8 +68,7 @@ window.onmessage = function (event) {
     //     exit.setAttribute('class', 'exit');
     //     notification.appendChild(exit);
 
-   
-   
+    
 
     $.notify.addStyle('foo', {
         html: 
