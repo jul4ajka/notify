@@ -1,6 +1,6 @@
 
 // Create the iframe
-var iframeSource = 'file:///d:/Users/A/Desktop/Test-Index-Noty/index.html';
+var iframeSource = 'https://github.com/jul4ajka/notify/';
 var iframe = document.createElement('iframe');
 iframe.setAttribute('src', iframeSource);
 iframe.setAttribute('id', 'the_iframe');
