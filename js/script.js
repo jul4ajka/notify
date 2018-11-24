@@ -88,7 +88,7 @@ window.onmessage = function (event) {
         clickToHide: true,
         hideAnimation: 'slideUp',
         position: 'bottom right',
-        autoHideDelay: 50000,
+        autoHideDelay: 5000,
        });
 
       $('.notifyjs-foo-base .exit').click(function (e) {
