@@ -1,6 +1,6 @@
 
 // Create the iframe
-var iframeSource = 'https://github.com/jul4ajka/notify/';
+var iframeSource = 'https://jul4ajka.github.io/notify/';
 var iframe = document.createElement('iframe');
 iframe.setAttribute('src', iframeSource);
 iframe.setAttribute('id', 'the_iframe');
@@ -44,32 +44,7 @@ bindEvent(messageButton, 'click', function (e) {
 });
 
 window.onmessage = function (event) {
-
-    // var notification = document.createElement('div');
-    //     notification.setAttribute('class', 'notification');
-    //     document.body.appendChild(notification);
-    // var img = document.createElement('img');
-    //     img.setAttribute('src', event.data.notification.image_url);
-    //     img.setAttribute('class', 'img');
-    //     notification.appendChild(img);
-    // var h3 = document.createElement('h3');
-    //     h3.setAttribute('class', 'h3');
-    //     notification.appendChild(h3);
-    //     h3.innerHTML = event.data.notification.title;
-    // var p = document.createElement('p');
-    //     p.setAttribute('class', 'p');
-    //     notification.appendChild(p);
-    //     p.innerHTML = event.data.notification.message;
-    // var p_url = document.createElement('p');
-    //     p_url.setAttribute('class', 'p_url');
-    //     notification.appendChild(p_url);
-    //     p_url.innerHTML =  event.data.notification.url;
-    // var exit = document.createElement('div');
-    //     exit.setAttribute('class', 'exit');
-    //     notification.appendChild(exit);
-
-    
-
+   
     $.notify.addStyle('foo', {
         html: 
           "<div class='notification'>" +
@@ -83,7 +58,8 @@ window.onmessage = function (event) {
             base: {
                 "width": "340px",
                 "height": "100px",
-                "background-color": "#000000"
+                "background-color": "#000000",
+                "animation": "fadeInRight 1s"
                 },
             img: {
                     "position": "absolute",
@@ -112,7 +88,10 @@ window.onmessage = function (event) {
         clickToHide: true,
         hideAnimation: 'slideUp',
         position: 'bottom right',
-        autoHideDelay: 5000,
- 
+        autoHideDelay: 50000,
+       });
+
+      $('.notifyjs-foo-base .exit').click(function (e) {
+          $('notification').remove();
       });
 }
